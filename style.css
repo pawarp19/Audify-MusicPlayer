@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster+Two&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: Lobster Two;
+    font-style: normal; 
+    font-weight: 400;
+}
+
+h1{
+    animation: whiteLight 3s infinite;
+}
+
+@keyframes whiteLight {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    }
+  }
+
+.container{
+    min-height: 90vh;
+    background-color: rgba(4, 4, 4, 0.5);;
+    color: #ffffff;
+    display: flex;
+    margin:23px auto 0px auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90%;
+    padding: 20px;
+    background-image: url('images/bg.jpg');    
+}
+
+
+nav{
+    font-family: Lobster;
+    color: white;
+    /* box-shadow: 0 0.1px 0.1px rgba(255, 255, 255, 0.1), 0 4px 8px rgba(255, 255, 255, 0.2); */
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 70px;
+    background-color: black;
+
+    & li{
+        padding: 0 13px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1); 
+    }
+}
+
+.mar{
+    margin-left: 30px;
+}
+
+nav img{
+    margin-left: 62px;
+    width: 50px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; 
+}
+
+.bottom{
+    height: 110px;
+    background-color: black;
+    bottom: 0;
+    /* position: sticky; */
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons{
+    margin-top: 19px;
+}
+
+.icons i{
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+#progressbar{
+    width: 70vw;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.songitemcontainer{
+    margin-top: 25px;
+    box-shadow: 0 0 7px rgba(78, 78, 78, 0.694), 0 0 7px rgba(88, 87, 78, 0.694), 0 0 7px rgba(86, 84, 84, 0.694);  
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-radius: 14px;
+}
+
+.songitem{
+    height: 38px;
+    display: flex;
+    width: 89%;
+    background-color: #ffffff;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    margin: 9px 0;
+    border-radius: 15px;
+}
+
+.songitem img{
+    width: 35px;
+    margin:1px 1px ;
+    border-radius: 50%;
+}
+#mastersongname{
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); 
+}
+
+.timestamp{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+
+    & .far{
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+}
+
+.songinfo{
+    position: absolute;
+    left: 15vw;
+    margin-top: 27px;
+}
+
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+@media only screen and (width<=870px) {
+    .icons i{
+        font-size: 1.2em;
+    }
+
+    #mastersongname{
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mar {
+        margin: 10px 0;
+    }
+
+    nav img {
+        margin-left: 0;
+        width: 40px;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    #progressbar {
+        width: 90vw;
+    }
+
+    .songinfo {
+        left: 5vw;
+    }
+
+    .container{
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (width<=525px) {
+    .icons i{
+        font-size: 1em;
+    }
+
+    #mastersongname{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (width<=525px) {
+    .icons i{
+        font-size: 0.9em;
+        padding: 0 0.2px;
+    }
+
+    #mastersongname{
+        font-size: 9px;
+    }
+}
+
